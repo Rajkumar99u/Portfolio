@@ -35,7 +35,6 @@ class VehicleManagementSystem:
         else:
             return f"Vehicle with VIN {vin} not found."
 
-# Create an instance of the vehicle management system
 vms = VehicleManagementSystem()
 
 # Gradio interface functions
@@ -64,7 +63,7 @@ with gr.Blocks() as app:
 
     with gr.Tab("View Vehicles"):
         view_output = gr.Textbox(label="Vehicles", interactive=False, lines=10)
-        view_btn = gr.Button("View All Vehicles")
+        view_btn = gr.Button("View Vehicles")
         
         view_btn.click(view_vehicles, outputs=view_output)
 
